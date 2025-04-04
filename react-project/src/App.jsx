@@ -1,4 +1,4 @@
-import ProfileCard from "./ProfileCard.jsx";
+import ProfileCard from "./components/ProfileCard.jsx";
 const App = () => {
   return (
     <div>

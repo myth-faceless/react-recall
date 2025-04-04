@@ -4,7 +4,7 @@ const ProfileCard = () => {
   return (
     <>
       {personData.map((currentElement) => (
-        <ProfileData key={currentElement.id} currentElement={currentElement} />
+        <ProfileData key={currentElement.id} data={currentElement} />
       ))}
     </>
   );

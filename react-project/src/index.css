@@ -1,87 +1,83 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* Colors */
+  --primary-color: #003cff;
+  --secondary-color: #f8f9fa;
+  --accent-color: #007bff;
+  --text-color: #212529;
+  --button-color: #454649;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* Spacing */
+  --content-padding: 2rem; /* Gap from screen edges */
+  --max-content-width: 1400px; /* Max width for centered content */
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Typography */
+  --font-base: 1rem;
+  --font-lg: 1.25rem;
+  --font-xl: 1.5rem;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* ===== Core Layout ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
 }
 
+/* ===== Content Container ===== */
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  flex-direction: column;
-}
-
-.imageCard {
-  text-align: center;
-  padding: 20px;
-  border: 2px solid #ddd;
-  border-radius: 10px;
-  margin: 10px;
-  width: 250px;
-}
-
-.image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 170px;
-  height: 170px;
-  border: 10px solid red;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-.image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding: 0 var(--content-padding); /* Creates side gaps */
+  /* background-color: #007bff; */
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* ===== Full-Width Elements ===== */
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
-@media (prefers-color-scheme: light) {
+/* Example components (customize as needed) */
+nav,
+footer,
+.hero-image {
+  composes: full-width; /* If using CSS modules */
+  /* OR just add class="full-width" to these elements */
+}
+
+nav {
+  height: 80px;
+  background: #222;
+  color: white;
+}
+
+footer {
+  height: 120px;
+  background: #222;
+  color: white;
+}
+
+/* ===== Images ===== */
+img.full-width {
+  width: 100vw;
+  height: auto; /* You control height via inline styles */
+  display: block;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+    --content-padding: 1rem;
   }
 }

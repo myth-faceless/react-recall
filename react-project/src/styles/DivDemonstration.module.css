@@ -1,0 +1,60 @@
+.parentDiv {
+  position: relative;
+  height: 800px;
+  width: 800px;
+  background-image: linear-gradient(to right, #729e91, #f892f3);
+  margin: 0 auto;
+}
+
+.child1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 150px;
+  width: 150px;
+  background: red;
+  color: white;
+  color: white;
+  font-size: 1.5rem;
+}
+.child2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 150px;
+  width: 150px;
+  background: red;
+  color: white;
+  font-size: 1.5rem;
+}
+.child3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 150px;
+  width: 150px;
+  background: red;
+  color: white;
+  font-size: 1.5rem;
+}
+.child4 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 150px;
+  width: 150px;
+  background: red;
+  color: white;
+  font-size: 1.5rem;
+}
+.child5 {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  background: red;
+  color: white;
+  font-size: 1.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

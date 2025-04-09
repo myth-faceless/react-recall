@@ -1,3 +1,4 @@
+import { DivDemonstration } from "./components/DivDemonstration.jsx";
 import MovieCard from "./components/MovieCard.jsx";
 import ParallaxDemo from "./components/ParallaxDemo.jsx";
 import ProfileCard from "./components/ProfileCard.jsx";
@@ -6,7 +7,8 @@ const App = () => {
     <div>
       {/* <ProfileCard /> */}
       {/* <MovieCard /> */}
-      <ParallaxDemo />
+      {/* <ParallaxDemo /> */}
+      <DivDemonstration />
     </div>
   );
 };

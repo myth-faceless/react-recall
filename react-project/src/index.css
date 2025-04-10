@@ -49,14 +49,6 @@ body {
   margin-right: -50vw;
 }
 
-/* Example components (customize as needed) */
-nav,
-footer,
-.hero-image {
-  composes: full-width; /* If using CSS modules */
-  /* OR just add class="full-width" to these elements */
-}
-
 nav {
   height: 80px;
   background: #222;
